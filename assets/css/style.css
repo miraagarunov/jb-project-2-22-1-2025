@@ -187,3 +187,12 @@ button:hover {
   text-decoration: none;
   display: inline-block;
 }
+
+.about-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em;
+}
