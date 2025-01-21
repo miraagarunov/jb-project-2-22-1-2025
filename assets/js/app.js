@@ -85,6 +85,10 @@
   }
 
   function showModal(coinDetails) {
+    const usdPrice = coinDetails.market_data.current_price.usd.toFixed(2);
+    const eurPrice = coinDetails.market_data.current_price.eur.toFixed(2);
+    const ilsPrice = coinDetails.market_data.current_price.ils.toFixed(2);
+
     const modal = document.createElement("div");
     modal.className = "modal fade";
     modal.id = "coinModal";
@@ -101,9 +105,9 @@
               0,
               200
             )}...</p>
-            <p><strong>Current Price (USD):</strong> $${coinDetails.market_data.current_price.usd.toFixed(
-              2
-            )}</p>
+            <p><strong>Current Price (USD):</strong> $${usdPrice}</p>
+            <p><strong>Current Price (EUR):</strong> €${eurPrice}</p>
+            <p><strong>Current Price (ILS):</strong> ₪${ilsPrice}</p>
           </div>
         </div>
       </div>
